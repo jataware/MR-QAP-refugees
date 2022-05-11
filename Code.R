@@ -1,4 +1,5 @@
-setwd("C:/Users/jscho/OneDrive/MRQAP")
+setwd("~/dev/S1_File")
+warnings()
 
 
 library(foreign)
@@ -61,6 +62,7 @@ dev.off()
 
 #####################################################
 # Matrix Creation
+print("Matrix Creation")
 #####################################################
 edges.1<- read.csv("Data_1.csv")
 edges.2<- read.csv("Data_2.csv")
@@ -179,6 +181,7 @@ edges.m4$trade.1991<- as.numeric(edges.m4$trade.1991)
 igraph.edges.m4<- graph_from_data_frame(edges.m4,directed=T)
 
 #2016
+print("2016")
 ref2016.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2016.flow"))
 ref2015.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -204,6 +207,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
 
 
 #2015
+print("2015")
 ref2015.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2015.flow"))
 ref2014.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -228,6 +232,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2010"))
 
 #2014
+print("2014")
 ref2014.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2014.flow"))
 ref2013.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -252,6 +257,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2010"))
 
 #2013
+print("2013")
 ref2013.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2013.flow"))
 ref2012.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -276,6 +282,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2010"))
 
 #2012
+print("2012")
 ref2012.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2012.flow"))
 ref2011.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -300,6 +307,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2010"))
 
 #2011
+print("2011")
 ref2011.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2011.flow"))
 ref2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -324,6 +332,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2010"))
 
 #2010
+print("2010")
 ref2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2010.flow"))
 ref2009.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -348,6 +357,7 @@ immigrant.pop.2010.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2010"))
 
 #2009
+print("2009")
 ref2009.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2009.flow"))
 ref2008.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -372,6 +382,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2008
+print("2008")
 ref2008.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2008.flow"))
 ref2007.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -396,6 +407,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2007
+print("2007")
 ref2007.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2007.flow"))
 ref2006.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -420,6 +432,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2006
+print("2006")
 ref2006.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2006.flow"))
 ref2005.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -444,6 +457,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2005
+print("2005")
 ref2005.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2005.flow"))
 ref2004.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -468,6 +482,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2004
+print("2004")
 ref2004.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2004.flow"))
 ref2003.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -492,6 +507,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2003
+print("2003")
 ref2003.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2003.flow"))
 ref2002.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -516,6 +532,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2002
+print("2002")
 ref2002.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2002.flow"))
 ref2001.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -540,6 +557,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2001
+print("2001")
 ref2001.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2001.flow"))
 ref2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -564,6 +582,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #2000
+print("2000")
 ref2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref2000.flow"))
 ref1999.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -588,6 +607,7 @@ immigrant.pop.2000.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.2000"))
 
 #1999
+print("1999")
 ref1999.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1999.flow"))
 ref1998.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -612,6 +632,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1998
+print("1998")
 ref1998.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1998.flow"))
 ref1997.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -636,6 +657,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1997
+print("1997")
 ref1997.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1997.flow"))
 ref1996.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -660,6 +682,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1996
+print("1996")
 ref1996.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1996.flow"))
 ref1995.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -684,6 +707,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1995
+print("1995")
 ref1995.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1995.flow"))
 ref1994.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -708,6 +732,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1994
+print("1994")
 ref1994.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1994.flow"))
 ref1993.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -732,6 +757,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1993
+print("1993")
 ref1993.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1993.flow"))
 ref1992.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -756,6 +782,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1992
+print("1992")
 ref1992.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1992.flow"))
 ref1991.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -780,6 +807,7 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
                                                        attr="immigrant.population.1990"))
 
 #1991
+print("1991")
 ref1991.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
                                             attr="ref1991.flow"))
 ref1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="both",names=T,
@@ -806,8 +834,10 @@ immigrant.pop.1990.mat<- as.matrix(as_adjacency_matrix(igraph.edges.m4,type="bot
 
 #####################################################
 # MRQAPs
+print("Fit MRQAPs")
 #####################################################
 
+print("2016")
 nl.2016.rivagg<-netlm(ref2016.mat,           # Dependent variable/network
                       list(ref2015.mat,
                            polyarchy.2016.mat, 
@@ -822,6 +852,7 @@ nl.2016.rivagg<-netlm(ref2016.mat,           # Dependent variable/network
                       ), # List the independent variables/networks
                       reps=1000, test.statistic="t-value") 
 
+print("2015")
 nl.2015.rivagg<-netlm(ref2015.mat,           
                       list(ref2014.mat,
                            polyarchy.2015.mat, 
@@ -837,6 +868,7 @@ nl.2015.rivagg<-netlm(ref2015.mat,
                       reps=1000, test.statistic="t-value") 
 
 
+print("2014")
 nl.2014.rivagg<-netlm(ref2014.mat,           
                       list(ref2013.mat,
                            polyarchy.2014.mat, 
@@ -851,6 +883,7 @@ nl.2014.rivagg<-netlm(ref2014.mat,
                       ), # List the independent variables/networks
                       reps=1000, test.statistic="t-value") 
 
+print("2013")
 nl.2013.rivagg<-netlm(ref2013.mat,           
                       list(ref2012.mat,
                            polyarchy.2013.mat, 
@@ -866,6 +899,7 @@ nl.2013.rivagg<-netlm(ref2013.mat,
                       reps=1000, test.statistic="t-value") 
 
 
+print("2012")
 nl.2012.rivagg<-netlm(ref2012.mat,           
                       list(ref2011.mat,
                            polyarchy.2012.mat,
@@ -881,321 +915,343 @@ nl.2012.rivagg<-netlm(ref2012.mat,
                       reps=1000, test.statistic="t-value") 
 
 
-nl.2011.rivagg<-netlm(ref2011.mat,           
-                      list(ref2010.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2011.mat, 
-                           armsflows.inverse.2011.mat,   
-                           riv.strategic.2011.mat,
-                           contiguity.any.mat,
-                           income.2011.gradient.mat, 
-                           pts.2011.mat,   
-                           defense.alliance.2011.mat,  
-                           trade.2011.mat, 
-                           immigrant.pop.2010.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2011")
+# nl.2011.rivagg<-netlm(ref2011.mat,
+#                       list(ref2010.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2011.mat,
+#                            armsflows.inverse.2011.mat,
+#                            riv.strategic.2011.mat,
+#                            contiguity.any.mat,
+#                            income.2011.gradient.mat,
+#                            pts.2011.mat,
+#                            defense.alliance.2011.mat,
+#                            trade.2011.mat,
+#                            immigrant.pop.2010.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
+# 
+# print("2010")
+# nl.2010.rivagg<-netlm(ref2010.mat,
+#                       list(ref2009.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2010.mat,
+#                            armsflows.inverse.2010.mat,
+#                            riv.strategic.2010.mat,
+#                            contiguity.any.mat,
+#                            income.2010.gradient.mat,
+#                            pts.2010.mat,
+#                            defense.alliance.2010.mat,
+#                            trade.2010.mat,
+#                            immigrant.pop.2010.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2010.rivagg<-netlm(ref2010.mat,           
-                      list(ref2009.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2010.mat, 
-                           armsflows.inverse.2010.mat,   
-                           riv.strategic.2010.mat,
-                           contiguity.any.mat,
-                           income.2010.gradient.mat, 
-                           pts.2010.mat,   
-                           defense.alliance.2010.mat,  
-                           trade.2010.mat, 
-                           immigrant.pop.2010.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2009")
+# nl.2009.rivagg<-netlm(ref2009.mat,           
+#                       list(ref2008.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2009.mat, 
+#                            armsflows.inverse.2009.mat,   
+#                            riv.strategic.2009.mat,
+#                            contiguity.any.mat,
+#                            income.2009.gradient.mat, 
+#                            pts.2009.mat,   
+#                            defense.alliance.2009.mat,  
+#                            trade.2009.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2009.rivagg<-netlm(ref2009.mat,           
-                      list(ref2008.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2009.mat, 
-                           armsflows.inverse.2009.mat,   
-                           riv.strategic.2009.mat,
-                           contiguity.any.mat,
-                           income.2009.gradient.mat, 
-                           pts.2009.mat,   
-                           defense.alliance.2009.mat,  
-                           trade.2009.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2008")
+# nl.2008.rivagg<-netlm(ref2008.mat,           
+#                       list(ref2007.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2008.mat, 
+#                            armsflows.inverse.2008.mat,   
+#                            riv.strategic.2008.mat,
+#                            contiguity.any.mat,
+#                            income.2008.gradient.mat, 
+#                            pts.2008.mat,   
+#                            defense.alliance.2008.mat,  
+#                            trade.2008.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2008.rivagg<-netlm(ref2008.mat,           
-                      list(ref2007.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2008.mat, 
-                           armsflows.inverse.2008.mat,   
-                           riv.strategic.2008.mat,
-                           contiguity.any.mat,
-                           income.2008.gradient.mat, 
-                           pts.2008.mat,   
-                           defense.alliance.2008.mat,  
-                           trade.2008.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2007")
+# nl.2007.rivagg<-netlm(ref2007.mat,           
+#                       list(ref2006.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2007.mat, 
+#                            armsflows.inverse.2007.mat,   
+#                            riv.strategic.2007.mat,
+#                            contiguity.any.mat,
+#                            income.2007.gradient.mat, 
+#                            pts.2007.mat,   
+#                            defense.alliance.2007.mat,  
+#                            trade.2007.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2007.rivagg<-netlm(ref2007.mat,           
-                      list(ref2006.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2007.mat, 
-                           armsflows.inverse.2007.mat,   
-                           riv.strategic.2007.mat,
-                           contiguity.any.mat,
-                           income.2007.gradient.mat, 
-                           pts.2007.mat,   
-                           defense.alliance.2007.mat,  
-                           trade.2007.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2006")
+# nl.2006.rivagg<-netlm(ref2006.mat,           
+#                       list(ref2005.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2006.mat, 
+#                            armsflows.inverse.2006.mat,   
+#                            riv.strategic.2006.mat,
+#                            contiguity.any.mat,
+#                            income.2006.gradient.mat, 
+#                            pts.2006.mat,   
+#                            defense.alliance.2006.mat,  
+#                            trade.2006.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2006.rivagg<-netlm(ref2006.mat,           
-                      list(ref2005.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2006.mat, 
-                           armsflows.inverse.2006.mat,   
-                           riv.strategic.2006.mat,
-                           contiguity.any.mat,
-                           income.2006.gradient.mat, 
-                           pts.2006.mat,   
-                           defense.alliance.2006.mat,  
-                           trade.2006.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2005")
+# nl.2005.rivagg<-netlm(ref2005.mat,           
+#                       list(ref2004.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2005.mat, 
+#                            armsflows.inverse.2005.mat,   
+#                            riv.strategic.2005.mat,
+#                            contiguity.any.mat,
+#                            income.2005.gradient.mat, 
+#                            pts.2005.mat,   
+#                            defense.alliance.2005.mat,  
+#                            trade.2005.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2005.rivagg<-netlm(ref2005.mat,           
-                      list(ref2004.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2005.mat, 
-                           armsflows.inverse.2005.mat,   
-                           riv.strategic.2005.mat,
-                           contiguity.any.mat,
-                           income.2005.gradient.mat, 
-                           pts.2005.mat,   
-                           defense.alliance.2005.mat,  
-                           trade.2005.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2004")
+# nl.2004.rivagg<-netlm(ref2004.mat,           
+#                       list(ref2003.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2004.mat, 
+#                            armsflows.inverse.2004.mat,   
+#                            riv.strategic.2004.mat,
+#                            contiguity.any.mat,
+#                            income.2004.gradient.mat, 
+#                            pts.2004.mat,   
+#                            defense.alliance.2004.mat,  
+#                            trade.2004.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2004.rivagg<-netlm(ref2004.mat,           
-                      list(ref2003.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2004.mat, 
-                           armsflows.inverse.2004.mat,   
-                           riv.strategic.2004.mat,
-                           contiguity.any.mat,
-                           income.2004.gradient.mat, 
-                           pts.2004.mat,   
-                           defense.alliance.2004.mat,  
-                           trade.2004.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2003")
+# nl.2003.rivagg<-netlm(ref2003.mat,           
+#                       list(ref2002.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2003.mat, 
+#                            armsflows.inverse.2003.mat,   
+#                            riv.strategic.2003.mat,
+#                            contiguity.any.mat,
+#                            income.2003.gradient.mat, 
+#                            pts.2003.mat,   
+#                            defense.alliance.2003.mat,  
+#                            trade.2003.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2003.rivagg<-netlm(ref2003.mat,           
-                      list(ref2002.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2003.mat, 
-                           armsflows.inverse.2003.mat,   
-                           riv.strategic.2003.mat,
-                           contiguity.any.mat,
-                           income.2003.gradient.mat, 
-                           pts.2003.mat,   
-                           defense.alliance.2003.mat,  
-                           trade.2003.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2002")
+# nl.2002.rivagg<-netlm(ref2002.mat,           
+#                       list(ref2001.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2002.mat, 
+#                            armsflows.inverse.2002.mat,   
+#                            riv.strategic.2002.mat,
+#                            contiguity.any.mat,
+#                            income.2002.gradient.mat, 
+#                            pts.2002.mat,   
+#                            defense.alliance.2002.mat,  
+#                            trade.2002.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2002.rivagg<-netlm(ref2002.mat,           
-                      list(ref2001.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2002.mat, 
-                           armsflows.inverse.2002.mat,   
-                           riv.strategic.2002.mat,
-                           contiguity.any.mat,
-                           income.2002.gradient.mat, 
-                           pts.2002.mat,   
-                           defense.alliance.2002.mat,  
-                           trade.2002.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2001")
+# nl.2001.rivagg<-netlm(ref2001.mat,           
+#                       list(ref2000.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2001.mat, 
+#                            armsflows.inverse.2001.mat,   
+#                            riv.strategic.2001.mat,
+#                            contiguity.any.mat,
+#                            income.2001.gradient.mat, 
+#                            pts.2001.mat,   
+#                            defense.alliance.2001.mat,  
+#                            trade.2001.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2001.rivagg<-netlm(ref2001.mat,           
-                      list(ref2000.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2001.mat, 
-                           armsflows.inverse.2001.mat,   
-                           riv.strategic.2001.mat,
-                           contiguity.any.mat,
-                           income.2001.gradient.mat, 
-                           pts.2001.mat,   
-                           defense.alliance.2001.mat,  
-                           trade.2001.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("2000")
+# nl.2000.rivagg<-netlm(ref2000.mat,           
+#                       list(ref1999.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.2000.mat, 
+#                            armsflows.inverse.2000.mat,   
+#                            riv.strategic.2000.mat,
+#                            contiguity.any.mat,
+#                            income.2000.gradient.mat, 
+#                            pts.2000.mat,   
+#                            defense.alliance.2000.mat,  
+#                            trade.2000.mat, 
+#                            immigrant.pop.2000.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.2000.rivagg<-netlm(ref2000.mat,           
-                      list(ref1999.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.2000.mat, 
-                           armsflows.inverse.2000.mat,   
-                           riv.strategic.2000.mat,
-                           contiguity.any.mat,
-                           income.2000.gradient.mat, 
-                           pts.2000.mat,   
-                           defense.alliance.2000.mat,  
-                           trade.2000.mat, 
-                           immigrant.pop.2000.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1999")
+# nl.1999.rivagg<-netlm(ref1999.mat,           
+#                       list(ref1998.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1999.mat, 
+#                            armsflows.inverse.1999.mat,   
+#                            riv.strategic.1999.mat,
+#                            contiguity.any.mat,
+#                            income.1999.gradient.mat, 
+#                            pts.1999.mat,   
+#                            defense.alliance.1999.mat,  
+#                            trade.1999.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1999.rivagg<-netlm(ref1999.mat,           
-                      list(ref1998.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1999.mat, 
-                           armsflows.inverse.1999.mat,   
-                           riv.strategic.1999.mat,
-                           contiguity.any.mat,
-                           income.1999.gradient.mat, 
-                           pts.1999.mat,   
-                           defense.alliance.1999.mat,  
-                           trade.1999.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1998")
+# nl.1998.rivagg<-netlm(ref1998.mat,           
+#                       list(ref1997.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1998.mat,
+#                            armsflows.inverse.1998.mat,   
+#                            riv.strategic.1998.mat,
+#                            contiguity.any.mat,
+#                            income.1998.gradient.mat, 
+#                            pts.1998.mat,   
+#                            defense.alliance.1998.mat,  
+#                            trade.1998.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1998.rivagg<-netlm(ref1998.mat,           
-                      list(ref1997.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1998.mat,
-                           armsflows.inverse.1998.mat,   
-                           riv.strategic.1998.mat,
-                           contiguity.any.mat,
-                           income.1998.gradient.mat, 
-                           pts.1998.mat,   
-                           defense.alliance.1998.mat,  
-                           trade.1998.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1997")
+# nl.1997.rivagg<-netlm(ref1997.mat,           
+#                       list(ref1996.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1997.mat, 
+#                            armsflows.inverse.1997.mat,   
+#                            riv.strategic.1997.mat,
+#                            contiguity.any.mat,
+#                            income.1997.gradient.mat, 
+#                            pts.1997.mat,   
+#                            defense.alliance.1997.mat,  
+#                            trade.1997.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1997.rivagg<-netlm(ref1997.mat,           
-                      list(ref1996.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1997.mat, 
-                           armsflows.inverse.1997.mat,   
-                           riv.strategic.1997.mat,
-                           contiguity.any.mat,
-                           income.1997.gradient.mat, 
-                           pts.1997.mat,   
-                           defense.alliance.1997.mat,  
-                           trade.1997.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1996")
+# nl.1996.rivagg<-netlm(ref1996.mat,           
+#                       list(ref1995.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1996.mat, 
+#                            armsflows.inverse.1996.mat,   
+#                            riv.strategic.1996.mat,
+#                            contiguity.any.mat,
+#                            income.1996.gradient.mat, 
+#                            pts.1996.mat,   
+#                            defense.alliance.1996.mat,  
+#                            trade.1996.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1996.rivagg<-netlm(ref1996.mat,           
-                      list(ref1995.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1996.mat, 
-                           armsflows.inverse.1996.mat,   
-                           riv.strategic.1996.mat,
-                           contiguity.any.mat,
-                           income.1996.gradient.mat, 
-                           pts.1996.mat,   
-                           defense.alliance.1996.mat,  
-                           trade.1996.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1995")
+# nl.1995.rivagg<-netlm(ref1995.mat,           
+#                       list(ref1994.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1995.mat, 
+#                            armsflows.inverse.1995.mat,   
+#                            riv.strategic.1995.mat,
+#                            contiguity.any.mat,
+#                            income.1995.gradient.mat, 
+#                            pts.1995.mat,   
+#                            defense.alliance.1995.mat,  
+#                            trade.1995.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1995.rivagg<-netlm(ref1995.mat,           
-                      list(ref1994.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1995.mat, 
-                           armsflows.inverse.1995.mat,   
-                           riv.strategic.1995.mat,
-                           contiguity.any.mat,
-                           income.1995.gradient.mat, 
-                           pts.1995.mat,   
-                           defense.alliance.1995.mat,  
-                           trade.1995.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1994")
+# nl.1994.rivagg<-netlm(ref1994.mat,           
+#                       list(ref1993.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1994.mat, 
+#                            armsflows.inverse.1994.mat,   
+#                            riv.strategic.1994.mat,
+#                            contiguity.any.mat,
+#                            income.1994.gradient.mat, 
+#                            pts.1994.mat,   
+#                            defense.alliance.1994.mat,  
+#                            trade.1994.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1994.rivagg<-netlm(ref1994.mat,           
-                      list(ref1993.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1994.mat, 
-                           armsflows.inverse.1994.mat,   
-                           riv.strategic.1994.mat,
-                           contiguity.any.mat,
-                           income.1994.gradient.mat, 
-                           pts.1994.mat,   
-                           defense.alliance.1994.mat,  
-                           trade.1994.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1993")
+# nl.1993.rivagg<-netlm(ref1993.mat,           
+#                       list(ref1992.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1993.mat, 
+#                            armsflows.inverse.1993.mat,   
+#                            riv.strategic.1993.mat,
+#                            contiguity.any.mat,
+#                            income.1993.gradient.mat, 
+#                            pts.1993.mat,   
+#                            defense.alliance.1993.mat,  
+#                            trade.1993.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1993.rivagg<-netlm(ref1993.mat,           
-                      list(ref1992.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1993.mat, 
-                           armsflows.inverse.1993.mat,   
-                           riv.strategic.1993.mat,
-                           contiguity.any.mat,
-                           income.1993.gradient.mat, 
-                           pts.1993.mat,   
-                           defense.alliance.1993.mat,  
-                           trade.1993.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1992")
+# nl.1992.rivagg<-netlm(ref1992.mat,           
+#                       list(ref1991.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1992.mat, 
+#                            armsflows.inverse.1992.mat,   
+#                            riv.strategic.1992.mat,
+#                            contiguity.any.mat,
+#                            income.1992.gradient.mat, 
+#                            pts.1992.mat,   
+#                            defense.alliance.1992.mat,  
+#                            trade.1992.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1992.rivagg<-netlm(ref1992.mat,           
-                      list(ref1991.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1992.mat, 
-                           armsflows.inverse.1992.mat,   
-                           riv.strategic.1992.mat,
-                           contiguity.any.mat,
-                           income.1992.gradient.mat, 
-                           pts.1992.mat,   
-                           defense.alliance.1992.mat,  
-                           trade.1992.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
+# print("1991")
+# nl.1991.rivagg<-netlm(ref1991.mat,           
+#                       list(ref1990.mat,   # Add, account for no South Sudan (missing value)
+#                            polyarchy.1991.mat, 
+#                            armsflows.inverse.1991.mat,   
+#                            riv.strategic.1991.mat,
+#                            contiguity.any.mat,
+#                            income.1991.gradient.mat, 
+#                            pts.1991.mat,   
+#                            defense.alliance.1991.mat,  
+#                            trade.1991.mat, 
+#                            immigrant.pop.1990.mat
+#                       ), # List the independent variables/networks
+#                       reps=1000, test.statistic="t-value")
 
-nl.1991.rivagg<-netlm(ref1991.mat,           
-                      list(ref1990.mat,   # Add, account for no South Sudan (missing value)
-                           polyarchy.1991.mat, 
-                           armsflows.inverse.1991.mat,   
-                           riv.strategic.1991.mat,
-                           contiguity.any.mat,
-                           income.1991.gradient.mat, 
-                           pts.1991.mat,   
-                           defense.alliance.1991.mat,  
-                           trade.1991.mat, 
-                           immigrant.pop.1990.mat
-                      ), # List the independent variables/networks
-                      reps=1000, test.statistic="t-value")
-
-a<- cbind(nl.1991.rivagg$coefficients,nl.1991.rivagg$pgreqabs,
-          nl.1992.rivagg$coefficients,nl.1992.rivagg$pgreqabs,
-          nl.1993.rivagg$coefficients,nl.1993.rivagg$pgreqabs,
-          nl.1994.rivagg$coefficients,nl.1994.rivagg$pgreqabs,
-          nl.1995.rivagg$coefficients,nl.1995.rivagg$pgreqabs,
-          nl.1996.rivagg$coefficients,nl.1996.rivagg$pgreqabs,
-          nl.1997.rivagg$coefficients,nl.1997.rivagg$pgreqabs,
-          nl.1998.rivagg$coefficients,nl.1998.rivagg$pgreqabs,
-          nl.1999.rivagg$coefficients,nl.1999.rivagg$pgreqabs,
-          nl.2000.rivagg$coefficients,nl.2000.rivagg$pgreqabs,
-          nl.2001.rivagg$coefficients,nl.2001.rivagg$pgreqabs,
-          nl.2002.rivagg$coefficients,nl.2002.rivagg$pgreqabs,
-          nl.2003.rivagg$coefficients,nl.2003.rivagg$pgreqabs,
-          nl.2004.rivagg$coefficients,nl.2004.rivagg$pgreqabs,
-          nl.2005.rivagg$coefficients,nl.2005.rivagg$pgreqabs,
-          nl.2006.rivagg$coefficients,nl.2006.rivagg$pgreqabs,
-          nl.2007.rivagg$coefficients,nl.2007.rivagg$pgreqabs,
-          nl.2008.rivagg$coefficients,nl.2008.rivagg$pgreqabs,
-          nl.2009.rivagg$coefficients,nl.2009.rivagg$pgreqabs,
-          nl.2010.rivagg$coefficients,nl.2010.rivagg$pgreqabs,
-          nl.2011.rivagg$coefficients,nl.2011.rivagg$pgreqabs,
+print("bind a")
+a<- cbind(# nl.1991.rivagg$coefficients,nl.1991.rivagg$pgreqabs,
+     #      nl.1992.rivagg$coefficients,nl.1992.rivagg$pgreqabs,
+     #      nl.1993.rivagg$coefficients,nl.1993.rivagg$pgreqabs,
+     #      nl.1994.rivagg$coefficients,nl.1994.rivagg$pgreqabs,
+     #      nl.1995.rivagg$coefficients,nl.1995.rivagg$pgreqabs,
+     #      nl.1996.rivagg$coefficients,nl.1996.rivagg$pgreqabs,
+     #      nl.1997.rivagg$coefficients,nl.1997.rivagg$pgreqabs,
+     #      nl.1998.rivagg$coefficients,nl.1998.rivagg$pgreqabs,
+     #      nl.1999.rivagg$coefficients,nl.1999.rivagg$pgreqabs,
+     #      nl.2000.rivagg$coefficients,nl.2000.rivagg$pgreqabs,
+     #      nl.2001.rivagg$coefficients,nl.2001.rivagg$pgreqabs,
+     #      nl.2002.rivagg$coefficients,nl.2002.rivagg$pgreqabs,
+     #      nl.2003.rivagg$coefficients,nl.2003.rivagg$pgreqabs,
+     #      nl.2004.rivagg$coefficients,nl.2004.rivagg$pgreqabs,
+     #      nl.2005.rivagg$coefficients,nl.2005.rivagg$pgreqabs,
+     #      nl.2006.rivagg$coefficients,nl.2006.rivagg$pgreqabs,
+     #      nl.2007.rivagg$coefficients,nl.2007.rivagg$pgreqabs,
+     #      nl.2008.rivagg$coefficients,nl.2008.rivagg$pgreqabs,
+     #      nl.2009.rivagg$coefficients,nl.2009.rivagg$pgreqabs,
+          # nl.2010.rivagg$coefficients,nl.2010.rivagg$pgreqabs,
+          # nl.2011.rivagg$coefficients,nl.2011.rivagg$pgreqabs,
           nl.2012.rivagg$coefficients,nl.2012.rivagg$pgreqabs, 
           nl.2013.rivagg$coefficients,nl.2013.rivagg$pgreqabs,
           nl.2014.rivagg$coefficients,nl.2014.rivagg$pgreqabs,
@@ -1203,27 +1259,28 @@ a<- cbind(nl.1991.rivagg$coefficients,nl.1991.rivagg$pgreqabs,
           nl.2016.rivagg$coefficients,nl.2016.rivagg$pgreqabs)
 
 ###Use t-statistic for HCA
-b<- cbind(nl.1991.rivagg$tstat,
-          nl.1992.rivagg$tstat,
-          nl.1993.rivagg$tstat,
-          nl.1994.rivagg$tstat,
-          nl.1995.rivagg$tstat,
-          nl.1996.rivagg$tstat,
-          nl.1997.rivagg$tstat,
-          nl.1998.rivagg$tstat,
-          nl.1999.rivagg$tstat,
-          nl.2000.rivagg$tstat,
-          nl.2001.rivagg$tstat,
-          nl.2002.rivagg$tstat,
-          nl.2003.rivagg$tstat,
-          nl.2004.rivagg$tstat,
-          nl.2005.rivagg$tstat,
-          nl.2006.rivagg$tstat,
-          nl.2007.rivagg$tstat,
-          nl.2008.rivagg$tstat,
-          nl.2009.rivagg$tstat,
-          nl.2010.rivagg$tstat,
-          nl.2011.rivagg$tstat,
+print("bind b")
+b<- cbind(# nl.1991.rivagg$tstat,
+          # nl.1992.rivagg$tstat,
+          # nl.1993.rivagg$tstat,
+          # nl.1994.rivagg$tstat,
+          # nl.1995.rivagg$tstat,
+          # nl.1996.rivagg$tstat,
+          # nl.1997.rivagg$tstat,
+          # nl.1998.rivagg$tstat,
+          # nl.1999.rivagg$tstat,
+          # nl.2000.rivagg$tstat,
+          # nl.2001.rivagg$tstat,
+          # nl.2002.rivagg$tstat,
+          # nl.2003.rivagg$tstat,
+          # nl.2004.rivagg$tstat,
+          # nl.2005.rivagg$tstat,
+          # nl.2006.rivagg$tstat,
+          # nl.2007.rivagg$tstat,
+          # nl.2008.rivagg$tstat,
+          # nl.2009.rivagg$tstat,
+          # nl.2010.rivagg$tstat,
+          # nl.2011.rivagg$tstat,
           nl.2012.rivagg$tstat, 
           nl.2013.rivagg$tstat,
           nl.2014.rivagg$tstat,
@@ -1232,6 +1289,7 @@ b<- cbind(nl.1991.rivagg$tstat,
 
 ########################################################
 ### Cluster Analysis
+print("Cluster Analysis")
 ########################################################
 library(corrr)
 library(ggraph)
@@ -1248,21 +1306,23 @@ library(ggpubr)
 b.nonvector<- b[-c(1),]
 b.nonvector<- b.nonvector %>%
   correlate() %>%
-  select(-rowname)
+  select(-term) %>%
+  cbind()
 diag(b.nonvector)<- 1
 dissim<- as.dist(1-b.nonvector)
 
-plot(hclust(dissim, method = "centroid"), labels = c("1991 Refugee Flows","1992 Refugee Flows",
-                                                     "1993 Refugee Flows","1994 Refugee Flows",
-                                                     "1995 Refugee Flows","1996 Refugee Flows",
-                                                     "1997 Refugee Flows","1998 Refugee Flows",
-                                                     "1999 Refugee Flows","2000 Refugee Flows",
-                                                     "2001 Refugee Flows","2002 Refugee Flows",
-                                                     "2003 Refugee Flows","2004 Refugee Flows",
-                                                     "2005 Refugee Flows","2006 Refugee Flows",
-                                                     "2007 Refugee Flows","2008 Refugee Flows",
-                                                     "2009 Refugee Flows","2010 Refugee Flows",
-                                                     "2011 Refugee Flows","2012 Refugee Flows",
+plot(hclust(dissim, method = "centroid"), labels = c(# "1991 Refugee Flows","1992 Refugee Flows",
+                                                  #    "1993 Refugee Flows","1994 Refugee Flows",
+                                                  #    "1995 Refugee Flows","1996 Refugee Flows",
+                                                  #    "1997 Refugee Flows","1998 Refugee Flows",
+                                                  #    "1999 Refugee Flows","2000 Refugee Flows",
+                                                  #    "2001 Refugee Flows","2002 Refugee Flows",
+                                                  #    "2003 Refugee Flows","2004 Refugee Flows",
+                                                  #    "2005 Refugee Flows","2006 Refugee Flows",
+                                                  #    "2007 Refugee Flows","2008 Refugee Flows",
+                                                  #    "2009 Refugee Flows","2010 Refugee Flows",
+                                                     # "2011 Refugee Flows",
+                                                                          "2012 Refugee Flows",
                                                      "2013 Refugee Flows","2014 Refugee Flows",
                                                      "2015 Refugee Flows","2016 Refugee Flows"))
 
@@ -1278,17 +1338,18 @@ clust<- kmeans(mds,4)$cluster %>%
 mds <- mds %>%
   mutate(groups = clust)
 
-rownames(mds)<- c("1991","1992",
-                  "1993","1994",
-                  "1995","1996",
-                  "1997","1998",
-                  "1999","2000",
-                  "2001","2002",
-                  "2003","2004",
-                  "2005","2006",
-                  "2007","2008",
-                  "2009","2010",
-                  "2011","2012",
+rownames(mds)<- c(# "1991","1992",
+               #    "1993","1994",
+               #    "1995","1996",
+               #    "1997","1998",
+               #    "1999","2000",
+               #    "2001","2002",
+               #    "2003","2004",
+               #    "2005","2006",
+               #    "2007","2008",
+               #    "2009","2010",
+                  # "2011",
+                          "2012",
                   "2013","2014",
                   "2015","2016")
 
@@ -1302,270 +1363,270 @@ ggscatter(mds, x = "Dim.1", y = "Dim.2", color = "groups",
           repel = TRUE)
 
 
-prior.ref<- rbind(nl.1991.rivagg$tstat[2],
-                  nl.1992.rivagg$tstat[2],
-                  nl.1993.rivagg$tstat[2],
-                  nl.1994.rivagg$tstat[2],
-                  nl.1995.rivagg$tstat[2],
-                  nl.1996.rivagg$tstat[2],
-                  nl.1997.rivagg$tstat[2],
-                  nl.1998.rivagg$tstat[2],
-                  nl.1999.rivagg$tstat[2],
-                  nl.2000.rivagg$tstat[2],
-                  nl.2001.rivagg$tstat[2],
-                  nl.2002.rivagg$tstat[2],
-                  nl.2003.rivagg$tstat[2],
-                  nl.2004.rivagg$tstat[2],
-                  nl.2005.rivagg$tstat[2],
-                  nl.2006.rivagg$tstat[2],
-                  nl.2007.rivagg$tstat[2],
-                  nl.2008.rivagg$tstat[2],
-                  nl.2009.rivagg$tstat[2],
-                  nl.2010.rivagg$tstat[2],
-                  nl.2011.rivagg$tstat[2],
+prior.ref<- rbind(# nl.1991.rivagg$tstat[2],
+               #    nl.1992.rivagg$tstat[2],
+               #    nl.1993.rivagg$tstat[2],
+               #    nl.1994.rivagg$tstat[2],
+               #    nl.1995.rivagg$tstat[2],
+               #    nl.1996.rivagg$tstat[2],
+               #    nl.1997.rivagg$tstat[2],
+               #    nl.1998.rivagg$tstat[2],
+               #    nl.1999.rivagg$tstat[2],
+               #    nl.2000.rivagg$tstat[2],
+               #    nl.2001.rivagg$tstat[2],
+               #    nl.2002.rivagg$tstat[2],
+               #    nl.2003.rivagg$tstat[2],
+               #    nl.2004.rivagg$tstat[2],
+               #    nl.2005.rivagg$tstat[2],
+               #    nl.2006.rivagg$tstat[2],
+               #    nl.2007.rivagg$tstat[2],
+               #    nl.2008.rivagg$tstat[2],
+               #    nl.2009.rivagg$tstat[2],
+                  # nl.2010.rivagg$tstat[2],
+                  # nl.2011.rivagg$tstat[2],
                   nl.2012.rivagg$tstat[2], 
                   nl.2013.rivagg$tstat[2],
                   nl.2014.rivagg$tstat[2],
                   nl.2015.rivagg$tstat[2], 
                   nl.2016.rivagg$tstat[2])
 
-regime.type<- rbind(nl.1991.rivagg$tstat[3],
-                    nl.1992.rivagg$tstat[3],
-                    nl.1993.rivagg$tstat[3],
-                    nl.1994.rivagg$tstat[3],
-                    nl.1995.rivagg$tstat[3],
-                    nl.1996.rivagg$tstat[3],
-                    nl.1997.rivagg$tstat[3],
-                    nl.1998.rivagg$tstat[3],
-                    nl.1999.rivagg$tstat[3],
-                    nl.2000.rivagg$tstat[3],
-                    nl.2001.rivagg$tstat[3],
-                    nl.2002.rivagg$tstat[3],
-                    nl.2003.rivagg$tstat[3],
-                    nl.2004.rivagg$tstat[3],
-                    nl.2005.rivagg$tstat[3],
-                    nl.2006.rivagg$tstat[3],
-                    nl.2007.rivagg$tstat[3],
-                    nl.2008.rivagg$tstat[3],
-                    nl.2009.rivagg$tstat[3],
-                    nl.2010.rivagg$tstat[3],
-                    nl.2011.rivagg$tstat[3],
+regime.type<- rbind(# nl.1991.rivagg$tstat[3],
+                    # nl.1992.rivagg$tstat[3],
+                    # nl.1993.rivagg$tstat[3],
+                    # nl.1994.rivagg$tstat[3],
+                    # nl.1995.rivagg$tstat[3],
+                    # nl.1996.rivagg$tstat[3],
+                    # nl.1997.rivagg$tstat[3],
+                    # nl.1998.rivagg$tstat[3],
+                    # nl.1999.rivagg$tstat[3],
+                    # nl.2000.rivagg$tstat[3],
+                    # nl.2001.rivagg$tstat[3],
+                    # nl.2002.rivagg$tstat[3],
+                    # nl.2003.rivagg$tstat[3],
+                    # nl.2004.rivagg$tstat[3],
+                    # nl.2005.rivagg$tstat[3],
+                    # nl.2006.rivagg$tstat[3],
+                    # nl.2007.rivagg$tstat[3],
+                    # nl.2008.rivagg$tstat[3],
+                    # nl.2009.rivagg$tstat[3],
+                    # nl.2010.rivagg$tstat[3],
+                    # nl.2011.rivagg$tstat[3],
                     nl.2012.rivagg$tstat[3], 
                     nl.2013.rivagg$tstat[3],
                     nl.2014.rivagg$tstat[3],
                     nl.2015.rivagg$tstat[3], 
                     nl.2016.rivagg$tstat[3])
 
-af.inverse<- rbind(nl.1991.rivagg$tstat[4],
-                   nl.1992.rivagg$tstat[4],
-                   nl.1993.rivagg$tstat[4],
-                   nl.1994.rivagg$tstat[4],
-                   nl.1995.rivagg$tstat[4],
-                   nl.1996.rivagg$tstat[4],
-                   nl.1997.rivagg$tstat[4],
-                   nl.1998.rivagg$tstat[4],
-                   nl.1999.rivagg$tstat[4],
-                   nl.2000.rivagg$tstat[4],
-                   nl.2001.rivagg$tstat[4],
-                   nl.2002.rivagg$tstat[4],
-                   nl.2003.rivagg$tstat[4],
-                   nl.2004.rivagg$tstat[4],
-                   nl.2005.rivagg$tstat[4],
-                   nl.2006.rivagg$tstat[4],
-                   nl.2007.rivagg$tstat[4],
-                   nl.2008.rivagg$tstat[4],
-                   nl.2009.rivagg$tstat[4],
-                   nl.2010.rivagg$tstat[4],
-                   nl.2011.rivagg$tstat[4],
-                   nl.2012.rivagg$tstat[4], 
+af.inverse<- rbind(# nl.1991.rivagg$tstat[4],
+               #     nl.1992.rivagg$tstat[4],
+               #     nl.1993.rivagg$tstat[4],
+               #     nl.1994.rivagg$tstat[4],
+               #     nl.1995.rivagg$tstat[4],
+               #     nl.1996.rivagg$tstat[4],
+               #     nl.1997.rivagg$tstat[4],
+               #     nl.1998.rivagg$tstat[4],
+               #     nl.1999.rivagg$tstat[4],
+               #     nl.2000.rivagg$tstat[4],
+               #     nl.2001.rivagg$tstat[4],
+               #     nl.2002.rivagg$tstat[4],
+               #     nl.2003.rivagg$tstat[4],
+               #     nl.2004.rivagg$tstat[4],
+               #     nl.2005.rivagg$tstat[4],
+               #     nl.2006.rivagg$tstat[4],
+               #     nl.2007.rivagg$tstat[4],
+               #     nl.2008.rivagg$tstat[4],
+               #     nl.2009.rivagg$tstat[4],
+                   # nl.2010.rivagg$tstat[4],
+                   # nl.2011.rivagg$tstat[4],
+                   nl.2012.rivagg$tstat[4],
                    nl.2013.rivagg$tstat[4],
                    nl.2014.rivagg$tstat[4],
                    nl.2015.rivagg$tstat[4], 
                    nl.2016.rivagg$tstat[4])
 
-rivalry<- rbind(nl.1991.rivagg$tstat[5],
-                nl.1992.rivagg$tstat[5],
-                nl.1993.rivagg$tstat[5],
-                nl.1994.rivagg$tstat[5],
-                nl.1995.rivagg$tstat[5],
-                nl.1996.rivagg$tstat[5],
-                nl.1997.rivagg$tstat[5],
-                nl.1998.rivagg$tstat[5],
-                nl.1999.rivagg$tstat[5],
-                nl.2000.rivagg$tstat[5],
-                nl.2001.rivagg$tstat[5],
-                nl.2002.rivagg$tstat[5],
-                nl.2003.rivagg$tstat[5],
-                nl.2004.rivagg$tstat[5],
-                nl.2005.rivagg$tstat[5],
-                nl.2006.rivagg$tstat[5],
-                nl.2007.rivagg$tstat[5],
-                nl.2008.rivagg$tstat[5],
-                nl.2009.rivagg$tstat[5],
-                nl.2010.rivagg$tstat[5],
-                nl.2011.rivagg$tstat[5],
+rivalry<- rbind(# nl.1991.rivagg$tstat[5],
+               #  nl.1992.rivagg$tstat[5],
+               #  nl.1993.rivagg$tstat[5],
+               #  nl.1994.rivagg$tstat[5],
+               #  nl.1995.rivagg$tstat[5],
+               #  nl.1996.rivagg$tstat[5],
+               #  nl.1997.rivagg$tstat[5],
+               #  nl.1998.rivagg$tstat[5],
+               #  nl.1999.rivagg$tstat[5],
+               #  nl.2000.rivagg$tstat[5],
+               #  nl.2001.rivagg$tstat[5],
+               #  nl.2002.rivagg$tstat[5],
+               #  nl.2003.rivagg$tstat[5],
+               #  nl.2004.rivagg$tstat[5],
+               #  nl.2005.rivagg$tstat[5],
+               #  nl.2006.rivagg$tstat[5],
+               #  nl.2007.rivagg$tstat[5],
+               #  nl.2008.rivagg$tstat[5],
+               #  nl.2009.rivagg$tstat[5],
+                # nl.2010.rivagg$tstat[5],
+                # nl.2011.rivagg$tstat[5],
                 nl.2012.rivagg$tstat[5], 
                 nl.2013.rivagg$tstat[5],
                 nl.2014.rivagg$tstat[5],
                 nl.2015.rivagg$tstat[5], 
                 nl.2016.rivagg$tstat[5])
 
-cont<- rbind(nl.1991.rivagg$tstat[6],
-             nl.1992.rivagg$tstat[6],
-             nl.1993.rivagg$tstat[6],
-             nl.1994.rivagg$tstat[6],
-             nl.1995.rivagg$tstat[6],
-             nl.1996.rivagg$tstat[6],
-             nl.1997.rivagg$tstat[6],
-             nl.1998.rivagg$tstat[6],
-             nl.1999.rivagg$tstat[6],
-             nl.2000.rivagg$tstat[6],
-             nl.2001.rivagg$tstat[6],
-             nl.2002.rivagg$tstat[6],
-             nl.2003.rivagg$tstat[6],
-             nl.2004.rivagg$tstat[6],
-             nl.2005.rivagg$tstat[6],
-             nl.2006.rivagg$tstat[6],
-             nl.2007.rivagg$tstat[6],
-             nl.2008.rivagg$tstat[6],
-             nl.2009.rivagg$tstat[6],
-             nl.2010.rivagg$tstat[6],
-             nl.2011.rivagg$tstat[6],
+cont<- rbind(# nl.1991.rivagg$tstat[6],
+          #    nl.1992.rivagg$tstat[6],
+          #    nl.1993.rivagg$tstat[6],
+          #    nl.1994.rivagg$tstat[6],
+          #    nl.1995.rivagg$tstat[6],
+          #    nl.1996.rivagg$tstat[6],
+          #    nl.1997.rivagg$tstat[6],
+          #    nl.1998.rivagg$tstat[6],
+          #    nl.1999.rivagg$tstat[6],
+          #    nl.2000.rivagg$tstat[6],
+          #    nl.2001.rivagg$tstat[6],
+          #    nl.2002.rivagg$tstat[6],
+          #    nl.2003.rivagg$tstat[6],
+          #    nl.2004.rivagg$tstat[6],
+          #    nl.2005.rivagg$tstat[6],
+          #    nl.2006.rivagg$tstat[6],
+          #    nl.2007.rivagg$tstat[6],
+          #    nl.2008.rivagg$tstat[6],
+          #    nl.2009.rivagg$tstat[6],
+             # nl.2010.rivagg$tstat[6],
+             # nl.2011.rivagg$tstat[6],
              nl.2012.rivagg$tstat[6], 
              nl.2013.rivagg$tstat[6],
              nl.2014.rivagg$tstat[6],
              nl.2015.rivagg$tstat[6], 
              nl.2016.rivagg$tstat[6])
 
-income<- rbind(nl.1991.rivagg$tstat[7],
-               nl.1992.rivagg$tstat[7],
-               nl.1993.rivagg$tstat[7],
-               nl.1994.rivagg$tstat[7],
-               nl.1995.rivagg$tstat[7],
-               nl.1996.rivagg$tstat[7],
-               nl.1997.rivagg$tstat[7],
-               nl.1998.rivagg$tstat[7],
-               nl.1999.rivagg$tstat[7],
-               nl.2000.rivagg$tstat[7],
-               nl.2001.rivagg$tstat[7],
-               nl.2002.rivagg$tstat[7],
-               nl.2003.rivagg$tstat[7],
-               nl.2004.rivagg$tstat[7],
-               nl.2005.rivagg$tstat[7],
-               nl.2006.rivagg$tstat[7],
-               nl.2007.rivagg$tstat[7],
-               nl.2008.rivagg$tstat[7],
-               nl.2009.rivagg$tstat[7],
-               nl.2010.rivagg$tstat[7],
-               nl.2011.rivagg$tstat[7],
+income<- rbind(# nl.1991.rivagg$tstat[7],
+               # nl.1992.rivagg$tstat[7],
+               # nl.1993.rivagg$tstat[7],
+               # nl.1994.rivagg$tstat[7],
+               # nl.1995.rivagg$tstat[7],
+               # nl.1996.rivagg$tstat[7],
+               # nl.1997.rivagg$tstat[7],
+               # nl.1998.rivagg$tstat[7],
+               # nl.1999.rivagg$tstat[7],
+               # nl.2000.rivagg$tstat[7],
+               # nl.2001.rivagg$tstat[7],
+               # nl.2002.rivagg$tstat[7],
+               # nl.2003.rivagg$tstat[7],
+               # nl.2004.rivagg$tstat[7],
+               # nl.2005.rivagg$tstat[7],
+               # nl.2006.rivagg$tstat[7],
+               # nl.2007.rivagg$tstat[7],
+               # nl.2008.rivagg$tstat[7],
+               # nl.2009.rivagg$tstat[7],
+               # nl.2010.rivagg$tstat[7],
+               # nl.2011.rivagg$tstat[7],
                nl.2012.rivagg$tstat[7], 
                nl.2013.rivagg$tstat[7],
                nl.2014.rivagg$tstat[7],
                nl.2015.rivagg$tstat[7], 
                nl.2016.rivagg$tstat[7])
 
-pts<- rbind(nl.1991.rivagg$tstat[8],
-            nl.1992.rivagg$tstat[8],
-            nl.1993.rivagg$tstat[8],
-            nl.1994.rivagg$tstat[8],
-            nl.1995.rivagg$tstat[8],
-            nl.1996.rivagg$tstat[8],
-            nl.1997.rivagg$tstat[8],
-            nl.1998.rivagg$tstat[8],
-            nl.1999.rivagg$tstat[8],
-            nl.2000.rivagg$tstat[8],
-            nl.2001.rivagg$tstat[8],
-            nl.2002.rivagg$tstat[8],
-            nl.2003.rivagg$tstat[8],
-            nl.2004.rivagg$tstat[8],
-            nl.2005.rivagg$tstat[8],
-            nl.2006.rivagg$tstat[8],
-            nl.2007.rivagg$tstat[8],
-            nl.2008.rivagg$tstat[8],
-            nl.2009.rivagg$tstat[8],
-            nl.2010.rivagg$tstat[8],
-            nl.2011.rivagg$tstat[8],
+pts<- rbind(# nl.1991.rivagg$tstat[8],
+          #   nl.1992.rivagg$tstat[8],
+          #   nl.1993.rivagg$tstat[8],
+          #   nl.1994.rivagg$tstat[8],
+          #   nl.1995.rivagg$tstat[8],
+          #   nl.1996.rivagg$tstat[8],
+          #   nl.1997.rivagg$tstat[8],
+          #   nl.1998.rivagg$tstat[8],
+          #   nl.1999.rivagg$tstat[8],
+          #   nl.2000.rivagg$tstat[8],
+          #   nl.2001.rivagg$tstat[8],
+          #   nl.2002.rivagg$tstat[8],
+          #   nl.2003.rivagg$tstat[8],
+          #   nl.2004.rivagg$tstat[8],
+          #   nl.2005.rivagg$tstat[8],
+          #   nl.2006.rivagg$tstat[8],
+          #   nl.2007.rivagg$tstat[8],
+          #   nl.2008.rivagg$tstat[8],
+          #   nl.2009.rivagg$tstat[8],
+            # nl.2010.rivagg$tstat[8],
+            # nl.2011.rivagg$tstat[8],
             nl.2012.rivagg$tstat[8], 
             nl.2013.rivagg$tstat[8],
             nl.2014.rivagg$tstat[8],
             nl.2015.rivagg$tstat[8], 
             nl.2016.rivagg$tstat[8])
 
-def<- rbind(nl.1991.rivagg$tstat[9],
-            nl.1992.rivagg$tstat[9],
-            nl.1993.rivagg$tstat[9],
-            nl.1994.rivagg$tstat[9],
-            nl.1995.rivagg$tstat[9],
-            nl.1996.rivagg$tstat[9],
-            nl.1997.rivagg$tstat[9],
-            nl.1998.rivagg$tstat[9],
-            nl.1999.rivagg$tstat[9],
-            nl.2000.rivagg$tstat[9],
-            nl.2001.rivagg$tstat[9],
-            nl.2002.rivagg$tstat[9],
-            nl.2003.rivagg$tstat[9],
-            nl.2004.rivagg$tstat[9],
-            nl.2005.rivagg$tstat[9],
-            nl.2006.rivagg$tstat[9],
-            nl.2007.rivagg$tstat[9],
-            nl.2008.rivagg$tstat[9],
-            nl.2009.rivagg$tstat[9],
-            nl.2010.rivagg$tstat[9],
-            nl.2011.rivagg$tstat[9],
+def<- rbind(# nl.1991.rivagg$tstat[9],
+          #   nl.1992.rivagg$tstat[9],
+          #   nl.1993.rivagg$tstat[9],
+          #   nl.1994.rivagg$tstat[9],
+          #   nl.1995.rivagg$tstat[9],
+          #   nl.1996.rivagg$tstat[9],
+          #   nl.1997.rivagg$tstat[9],
+          #   nl.1998.rivagg$tstat[9],
+          #   nl.1999.rivagg$tstat[9],
+          #   nl.2000.rivagg$tstat[9],
+          #   nl.2001.rivagg$tstat[9],
+          #   nl.2002.rivagg$tstat[9],
+          #   nl.2003.rivagg$tstat[9],
+          #   nl.2004.rivagg$tstat[9],
+          #   nl.2005.rivagg$tstat[9],
+          #   nl.2006.rivagg$tstat[9],
+          #   nl.2007.rivagg$tstat[9],
+          #   nl.2008.rivagg$tstat[9],
+          #   nl.2009.rivagg$tstat[9],
+            # nl.2010.rivagg$tstat[9],
+            # nl.2011.rivagg$tstat[9],
             nl.2012.rivagg$tstat[9], 
             nl.2013.rivagg$tstat[9],
             nl.2014.rivagg$tstat[9],
             nl.2015.rivagg$tstat[9], 
             nl.2016.rivagg$tstat[9])
 
-tr<- rbind(nl.1991.rivagg$tstat[10],
-           nl.1992.rivagg$tstat[10],
-           nl.1993.rivagg$tstat[10],
-           nl.1994.rivagg$tstat[10],
-           nl.1995.rivagg$tstat[10],
-           nl.1996.rivagg$tstat[10],
-           nl.1997.rivagg$tstat[10],
-           nl.1998.rivagg$tstat[10],
-           nl.1999.rivagg$tstat[10],
-           nl.2000.rivagg$tstat[10],
-           nl.2001.rivagg$tstat[10],
-           nl.2002.rivagg$tstat[10],
-           nl.2003.rivagg$tstat[10],
-           nl.2004.rivagg$tstat[10],
-           nl.2005.rivagg$tstat[10],
-           nl.2006.rivagg$tstat[10],
-           nl.2007.rivagg$tstat[10],
-           nl.2008.rivagg$tstat[10],
-           nl.2009.rivagg$tstat[10],
-           nl.2010.rivagg$tstat[10],
-           nl.2011.rivagg$tstat[10],
+tr<- rbind(#nl.1991.rivagg$tstat[10],
+          #  nl.1992.rivagg$tstat[10],
+          #  nl.1993.rivagg$tstat[10],
+          #  nl.1994.rivagg$tstat[10],
+          #  nl.1995.rivagg$tstat[10],
+          #  nl.1996.rivagg$tstat[10],
+          #  nl.1997.rivagg$tstat[10],
+          #  nl.1998.rivagg$tstat[10],
+          #  nl.1999.rivagg$tstat[10],
+          #  nl.2000.rivagg$tstat[10],
+          #  nl.2001.rivagg$tstat[10],
+          #  nl.2002.rivagg$tstat[10],
+          #  nl.2003.rivagg$tstat[10],
+          #  nl.2004.rivagg$tstat[10],
+          #  nl.2005.rivagg$tstat[10],
+          #  nl.2006.rivagg$tstat[10],
+          #  nl.2007.rivagg$tstat[10],
+          #  nl.2008.rivagg$tstat[10],
+          #  nl.2009.rivagg$tstat[10],
+           # nl.2010.rivagg$tstat[10],
+           # nl.2011.rivagg$tstat[10],
            nl.2012.rivagg$tstat[10], 
            nl.2013.rivagg$tstat[10],
            nl.2014.rivagg$tstat[10],
            nl.2015.rivagg$tstat[10], 
            nl.2016.rivagg$tstat[10])
 
-imm<- rbind(nl.1991.rivagg$tstat[11],
-            nl.1992.rivagg$tstat[11],
-            nl.1993.rivagg$tstat[11],
-            nl.1994.rivagg$tstat[11],
-            nl.1995.rivagg$tstat[11],
-            nl.1996.rivagg$tstat[11],
-            nl.1997.rivagg$tstat[11],
-            nl.1998.rivagg$tstat[11],
-            nl.1999.rivagg$tstat[11],
-            nl.2000.rivagg$tstat[11],
-            nl.2001.rivagg$tstat[11],
-            nl.2002.rivagg$tstat[11],
-            nl.2003.rivagg$tstat[11],
-            nl.2004.rivagg$tstat[11],
-            nl.2005.rivagg$tstat[11],
-            nl.2006.rivagg$tstat[11],
-            nl.2007.rivagg$tstat[11],
-            nl.2008.rivagg$tstat[11],
-            nl.2009.rivagg$tstat[11],
-            nl.2010.rivagg$tstat[11],
-            nl.2011.rivagg$tstat[11],
+imm<- rbind(#nl.1991.rivagg$tstat[11],
+          #   nl.1992.rivagg$tstat[11],
+          #   nl.1993.rivagg$tstat[11],
+          #   nl.1994.rivagg$tstat[11],
+          #   nl.1995.rivagg$tstat[11],
+          #   nl.1996.rivagg$tstat[11],
+          #   nl.1997.rivagg$tstat[11],
+          #   nl.1998.rivagg$tstat[11],
+          #   nl.1999.rivagg$tstat[11],
+          #   nl.2000.rivagg$tstat[11],
+          #   nl.2001.rivagg$tstat[11],
+          #   nl.2002.rivagg$tstat[11],
+          #   nl.2003.rivagg$tstat[11],
+          #   nl.2004.rivagg$tstat[11],
+          #   nl.2005.rivagg$tstat[11],
+          #   nl.2006.rivagg$tstat[11],
+          #   nl.2007.rivagg$tstat[11],
+          #   nl.2008.rivagg$tstat[11],
+          #   nl.2009.rivagg$tstat[11],
+            # nl.2010.rivagg$tstat[11],
+            # nl.2011.rivagg$tstat[11],
             nl.2012.rivagg$tstat[11], 
             nl.2013.rivagg$tstat[11],
             nl.2014.rivagg$tstat[11],
@@ -1577,7 +1638,8 @@ c<- as.data.frame(cbind(prior.ref,regime.type,af.inverse,rivalry,
 
 variables<- c %>%
   correlate() %>%
-  select(-rowname)
+  select(-term) %>%
+  cbind()
 diag(variables)<- 1
 dissim.var<- as.dist(1-variables)
 
@@ -1617,359 +1679,359 @@ ggscatter(mds.v, x = "Dim.1", y = "Dim.2", color = "groups",
 #### Reverse engineer MR-QAP t-statistics
 #### qt(1-p-value/2,n-1) where n-1=degrees of freedom
 
-prior.ref.p<- rbind(nl.1991.rivagg$pgreqabs[2],
-                    nl.1992.rivagg$pgreqabs[2],
-                    nl.1993.rivagg$pgreqabs[2],
-                    nl.1994.rivagg$pgreqabs[2],
-                    nl.1995.rivagg$pgreqabs[2],
-                    nl.1996.rivagg$pgreqabs[2],
-                    nl.1997.rivagg$pgreqabs[2],
-                    nl.1998.rivagg$pgreqabs[2],
-                    nl.1999.rivagg$pgreqabs[2],
-                    nl.2000.rivagg$pgreqabs[2],
-                    nl.2001.rivagg$pgreqabs[2],
-                    nl.2002.rivagg$pgreqabs[2],
-                    nl.2003.rivagg$pgreqabs[2],
-                    nl.2004.rivagg$pgreqabs[2],
-                    nl.2005.rivagg$pgreqabs[2],
-                    nl.2006.rivagg$pgreqabs[2],
-                    nl.2007.rivagg$pgreqabs[2],
-                    nl.2008.rivagg$pgreqabs[2],
-                    nl.2009.rivagg$pgreqabs[2],
-                    nl.2010.rivagg$pgreqabs[2],
-                    nl.2011.rivagg$pgreqabs[2],
+prior.ref.p<- rbind(# nl.1991.rivagg$pgreqabs[2],
+                    # nl.1992.rivagg$pgreqabs[2],
+                    # nl.1993.rivagg$pgreqabs[2],
+                    # nl.1994.rivagg$pgreqabs[2],
+                    # nl.1995.rivagg$pgreqabs[2],
+                    # nl.1996.rivagg$pgreqabs[2],
+                    # nl.1997.rivagg$pgreqabs[2],
+                    # nl.1998.rivagg$pgreqabs[2],
+                    # nl.1999.rivagg$pgreqabs[2],
+                    # nl.2000.rivagg$pgreqabs[2],
+                    # nl.2001.rivagg$pgreqabs[2],
+                    # nl.2002.rivagg$pgreqabs[2],
+                    # nl.2003.rivagg$pgreqabs[2],
+                    # nl.2004.rivagg$pgreqabs[2],
+                    # nl.2005.rivagg$pgreqabs[2],
+                    # nl.2006.rivagg$pgreqabs[2],
+                    # nl.2007.rivagg$pgreqabs[2],
+                    # nl.2008.rivagg$pgreqabs[2],
+                    # nl.2009.rivagg$pgreqabs[2],
+                    # nl.2010.rivagg$pgreqabs[2],
+                    # nl.2011.rivagg$pgreqabs[2],
                     nl.2012.rivagg$pgreqabs[2], 
                     nl.2013.rivagg$pgreqabs[2],
                     nl.2014.rivagg$pgreqabs[2],
                     nl.2015.rivagg$pgreqabs[2], 
                     nl.2016.rivagg$pgreqabs[2])
 
-regime.type.p<- rbind(nl.1991.rivagg$pgreqabs[3],
-                      nl.1992.rivagg$pgreqabs[3],
-                      nl.1993.rivagg$pgreqabs[3],
-                      nl.1994.rivagg$pgreqabs[3],
-                      nl.1995.rivagg$pgreqabs[3],
-                      nl.1996.rivagg$pgreqabs[3],
-                      nl.1997.rivagg$pgreqabs[3],
-                      nl.1998.rivagg$pgreqabs[3],
-                      nl.1999.rivagg$pgreqabs[3],
-                      nl.2000.rivagg$pgreqabs[3],
-                      nl.2001.rivagg$pgreqabs[3],
-                      nl.2002.rivagg$pgreqabs[3],
-                      nl.2003.rivagg$pgreqabs[3],
-                      nl.2004.rivagg$pgreqabs[3],
-                      nl.2005.rivagg$pgreqabs[3],
-                      nl.2006.rivagg$pgreqabs[3],
-                      nl.2007.rivagg$pgreqabs[3],
-                      nl.2008.rivagg$pgreqabs[3],
-                      nl.2009.rivagg$pgreqabs[3],
-                      nl.2010.rivagg$pgreqabs[3],
-                      nl.2011.rivagg$pgreqabs[3],
+regime.type.p<- rbind(# nl.1991.rivagg$pgreqabs[3],
+                    #   nl.1992.rivagg$pgreqabs[3],
+                    #   nl.1993.rivagg$pgreqabs[3],
+                    #   nl.1994.rivagg$pgreqabs[3],
+                    #   nl.1995.rivagg$pgreqabs[3],
+                    #   nl.1996.rivagg$pgreqabs[3],
+                    #   nl.1997.rivagg$pgreqabs[3],
+                    #   nl.1998.rivagg$pgreqabs[3],
+                    #   nl.1999.rivagg$pgreqabs[3],
+                    #   nl.2000.rivagg$pgreqabs[3],
+                    #   nl.2001.rivagg$pgreqabs[3],
+                    #   nl.2002.rivagg$pgreqabs[3],
+                    #   nl.2003.rivagg$pgreqabs[3],
+                    #   nl.2004.rivagg$pgreqabs[3],
+                    #   nl.2005.rivagg$pgreqabs[3],
+                    #   nl.2006.rivagg$pgreqabs[3],
+                    #   nl.2007.rivagg$pgreqabs[3],
+                    #   nl.2008.rivagg$pgreqabs[3],
+                    #   nl.2009.rivagg$pgreqabs[3],
+                      # nl.2010.rivagg$pgreqabs[3],
+                      # nl.2011.rivagg$pgreqabs[3],
                       nl.2012.rivagg$pgreqabs[3], 
                       nl.2013.rivagg$pgreqabs[3],
                       nl.2014.rivagg$pgreqabs[3],
                       nl.2015.rivagg$pgreqabs[3], 
                       nl.2016.rivagg$pgreqabs[3])
 
-af.inverse.p<- rbind(nl.1991.rivagg$pgreqabs[4],
-                     nl.1992.rivagg$pgreqabs[4],
-                     nl.1993.rivagg$pgreqabs[4],
-                     nl.1994.rivagg$pgreqabs[4],
-                     nl.1995.rivagg$pgreqabs[4],
-                     nl.1996.rivagg$pgreqabs[4],
-                     nl.1997.rivagg$pgreqabs[4],
-                     nl.1998.rivagg$pgreqabs[4],
-                     nl.1999.rivagg$pgreqabs[4],
-                     nl.2000.rivagg$pgreqabs[4],
-                     nl.2001.rivagg$pgreqabs[4],
-                     nl.2002.rivagg$pgreqabs[4],
-                     nl.2003.rivagg$pgreqabs[4],
-                     nl.2004.rivagg$pgreqabs[4],
-                     nl.2005.rivagg$pgreqabs[4],
-                     nl.2006.rivagg$pgreqabs[4],
-                     nl.2007.rivagg$pgreqabs[4],
-                     nl.2008.rivagg$pgreqabs[4],
-                     nl.2009.rivagg$pgreqabs[4],
-                     nl.2010.rivagg$pgreqabs[4],
-                     nl.2011.rivagg$pgreqabs[4],
+af.inverse.p<- rbind(# nl.1991.rivagg$pgreqabs[4],
+                    #  nl.1992.rivagg$pgreqabs[4],
+                    #  nl.1993.rivagg$pgreqabs[4],
+                    #  nl.1994.rivagg$pgreqabs[4],
+                    #  nl.1995.rivagg$pgreqabs[4],
+                    #  nl.1996.rivagg$pgreqabs[4],
+                    #  nl.1997.rivagg$pgreqabs[4],
+                    #  nl.1998.rivagg$pgreqabs[4],
+                    #  nl.1999.rivagg$pgreqabs[4],
+                    #  nl.2000.rivagg$pgreqabs[4],
+                    #  nl.2001.rivagg$pgreqabs[4],
+                    #  nl.2002.rivagg$pgreqabs[4],
+                    #  nl.2003.rivagg$pgreqabs[4],
+                    #  nl.2004.rivagg$pgreqabs[4],
+                    #  nl.2005.rivagg$pgreqabs[4],
+                    #  nl.2006.rivagg$pgreqabs[4],
+                    #  nl.2007.rivagg$pgreqabs[4],
+                    #  nl.2008.rivagg$pgreqabs[4],
+                    #  nl.2009.rivagg$pgreqabs[4],
+                     # nl.2010.rivagg$pgreqabs[4],
+                     # nl.2011.rivagg$pgreqabs[4],
                      nl.2012.rivagg$pgreqabs[4], 
                      nl.2013.rivagg$pgreqabs[4],
                      nl.2014.rivagg$pgreqabs[4],
                      nl.2015.rivagg$pgreqabs[4], 
                      nl.2016.rivagg$pgreqabs[4])
 
-rivalry.p<- rbind(nl.1991.rivagg$pgreqabs[5],
-                  nl.1992.rivagg$pgreqabs[5],
-                  nl.1993.rivagg$pgreqabs[5],
-                  nl.1994.rivagg$pgreqabs[5],
-                  nl.1995.rivagg$pgreqabs[5],
-                  nl.1996.rivagg$pgreqabs[5],
-                  nl.1997.rivagg$pgreqabs[5],
-                  nl.1998.rivagg$pgreqabs[5],
-                  nl.1999.rivagg$pgreqabs[5],
-                  nl.2000.rivagg$pgreqabs[5],
-                  nl.2001.rivagg$pgreqabs[5],
-                  nl.2002.rivagg$pgreqabs[5],
-                  nl.2003.rivagg$pgreqabs[5],
-                  nl.2004.rivagg$pgreqabs[5],
-                  nl.2005.rivagg$pgreqabs[5],
-                  nl.2006.rivagg$pgreqabs[5],
-                  nl.2007.rivagg$pgreqabs[5],
-                  nl.2008.rivagg$pgreqabs[5],
-                  nl.2009.rivagg$pgreqabs[5],
-                  nl.2010.rivagg$pgreqabs[5],
-                  nl.2011.rivagg$pgreqabs[5],
+rivalry.p<- rbind(# nl.1991.rivagg$pgreqabs[5],
+               #    nl.1992.rivagg$pgreqabs[5],
+               #    nl.1993.rivagg$pgreqabs[5],
+               #    nl.1994.rivagg$pgreqabs[5],
+               #    nl.1995.rivagg$pgreqabs[5],
+               #    nl.1996.rivagg$pgreqabs[5],
+               #    nl.1997.rivagg$pgreqabs[5],
+               #    nl.1998.rivagg$pgreqabs[5],
+               #    nl.1999.rivagg$pgreqabs[5],
+               #    nl.2000.rivagg$pgreqabs[5],
+               #    nl.2001.rivagg$pgreqabs[5],
+               #    nl.2002.rivagg$pgreqabs[5],
+               #    nl.2003.rivagg$pgreqabs[5],
+               #    nl.2004.rivagg$pgreqabs[5],
+               #    nl.2005.rivagg$pgreqabs[5],
+               #    nl.2006.rivagg$pgreqabs[5],
+               #    nl.2007.rivagg$pgreqabs[5],
+               #    nl.2008.rivagg$pgreqabs[5],
+               #    nl.2009.rivagg$pgreqabs[5],
+                  # nl.2010.rivagg$pgreqabs[5],
+                  # nl.2011.rivagg$pgreqabs[5],
                   nl.2012.rivagg$pgreqabs[5], 
                   nl.2013.rivagg$pgreqabs[5],
                   nl.2014.rivagg$pgreqabs[5],
                   nl.2015.rivagg$pgreqabs[5], 
                   nl.2016.rivagg$pgreqabs[5])
 
-cont.p<- rbind(nl.1991.rivagg$pgreqabs[6],
-               nl.1992.rivagg$pgreqabs[6],
-               nl.1993.rivagg$pgreqabs[6],
-               nl.1994.rivagg$pgreqabs[6],
-               nl.1995.rivagg$pgreqabs[6],
-               nl.1996.rivagg$pgreqabs[6],
-               nl.1997.rivagg$pgreqabs[6],
-               nl.1998.rivagg$pgreqabs[6],
-               nl.1999.rivagg$pgreqabs[6],
-               nl.2000.rivagg$pgreqabs[6],
-               nl.2001.rivagg$pgreqabs[6],
-               nl.2002.rivagg$pgreqabs[6],
-               nl.2003.rivagg$pgreqabs[6],
-               nl.2004.rivagg$pgreqabs[6],
-               nl.2005.rivagg$pgreqabs[6],
-               nl.2006.rivagg$pgreqabs[6],
-               nl.2007.rivagg$pgreqabs[6],
-               nl.2008.rivagg$pgreqabs[6],
-               nl.2009.rivagg$pgreqabs[6],
-               nl.2010.rivagg$pgreqabs[6],
-               nl.2011.rivagg$pgreqabs[6],
+cont.p<- rbind(# nl.1991.rivagg$pgreqabs[6],
+               # nl.1992.rivagg$pgreqabs[6],
+               # nl.1993.rivagg$pgreqabs[6],
+               # nl.1994.rivagg$pgreqabs[6],
+               # nl.1995.rivagg$pgreqabs[6],
+               # nl.1996.rivagg$pgreqabs[6],
+               # nl.1997.rivagg$pgreqabs[6],
+               # nl.1998.rivagg$pgreqabs[6],
+               # nl.1999.rivagg$pgreqabs[6],
+               # nl.2000.rivagg$pgreqabs[6],
+               # nl.2001.rivagg$pgreqabs[6],
+               # nl.2002.rivagg$pgreqabs[6],
+               # nl.2003.rivagg$pgreqabs[6],
+               # nl.2004.rivagg$pgreqabs[6],
+               # nl.2005.rivagg$pgreqabs[6],
+               # nl.2006.rivagg$pgreqabs[6],
+               # nl.2007.rivagg$pgreqabs[6],
+               # nl.2008.rivagg$pgreqabs[6],
+               # nl.2009.rivagg$pgreqabs[6],
+               # nl.2010.rivagg$pgreqabs[6],
+               # nl.2011.rivagg$pgreqabs[6],
                nl.2012.rivagg$pgreqabs[6], 
                nl.2013.rivagg$pgreqabs[6],
                nl.2014.rivagg$pgreqabs[6],
                nl.2015.rivagg$pgreqabs[6], 
                nl.2016.rivagg$pgreqabs[6])
 
-income.p<- rbind(nl.1991.rivagg$pgreqabs[7],
-                 nl.1992.rivagg$pgreqabs[7],
-                 nl.1993.rivagg$pgreqabs[7],
-                 nl.1994.rivagg$pgreqabs[7],
-                 nl.1995.rivagg$pgreqabs[7],
-                 nl.1996.rivagg$pgreqabs[7],
-                 nl.1997.rivagg$pgreqabs[7],
-                 nl.1998.rivagg$pgreqabs[7],
-                 nl.1999.rivagg$pgreqabs[7],
-                 nl.2000.rivagg$pgreqabs[7],
-                 nl.2001.rivagg$pgreqabs[7],
-                 nl.2002.rivagg$pgreqabs[7],
-                 nl.2003.rivagg$pgreqabs[7],
-                 nl.2004.rivagg$pgreqabs[7],
-                 nl.2005.rivagg$pgreqabs[7],
-                 nl.2006.rivagg$pgreqabs[7],
-                 nl.2007.rivagg$pgreqabs[7],
-                 nl.2008.rivagg$pgreqabs[7],
-                 nl.2009.rivagg$pgreqabs[7],
-                 nl.2010.rivagg$pgreqabs[7],
-                 nl.2011.rivagg$pgreqabs[7],
+income.p<- rbind(# nl.1991.rivagg$pgreqabs[7],
+               #   nl.1992.rivagg$pgreqabs[7],
+               #   nl.1993.rivagg$pgreqabs[7],
+               #   nl.1994.rivagg$pgreqabs[7],
+               #   nl.1995.rivagg$pgreqabs[7],
+               #   nl.1996.rivagg$pgreqabs[7],
+               #   nl.1997.rivagg$pgreqabs[7],
+               #   nl.1998.rivagg$pgreqabs[7],
+               #   nl.1999.rivagg$pgreqabs[7],
+               #   nl.2000.rivagg$pgreqabs[7],
+               #   nl.2001.rivagg$pgreqabs[7],
+               #   nl.2002.rivagg$pgreqabs[7],
+               #   nl.2003.rivagg$pgreqabs[7],
+               #   nl.2004.rivagg$pgreqabs[7],
+               #   nl.2005.rivagg$pgreqabs[7],
+               #   nl.2006.rivagg$pgreqabs[7],
+               #   nl.2007.rivagg$pgreqabs[7],
+               #   nl.2008.rivagg$pgreqabs[7],
+               #   nl.2009.rivagg$pgreqabs[7],
+                 # nl.2010.rivagg$pgreqabs[7],
+                 # nl.2011.rivagg$pgreqabs[7],
                  nl.2012.rivagg$pgreqabs[7], 
                  nl.2013.rivagg$pgreqabs[7],
                  nl.2014.rivagg$pgreqabs[7],
                  nl.2015.rivagg$pgreqabs[7], 
                  nl.2016.rivagg$pgreqabs[7])
 
-pts.p<- rbind(nl.1991.rivagg$pgreqabs[8],
-              nl.1992.rivagg$pgreqabs[8],
-              nl.1993.rivagg$pgreqabs[8],
-              nl.1994.rivagg$pgreqabs[8],
-              nl.1995.rivagg$pgreqabs[8],
-              nl.1996.rivagg$pgreqabs[8],
-              nl.1997.rivagg$pgreqabs[8],
-              nl.1998.rivagg$pgreqabs[8],
-              nl.1999.rivagg$pgreqabs[8],
-              nl.2000.rivagg$pgreqabs[8],
-              nl.2001.rivagg$pgreqabs[8],
-              nl.2002.rivagg$pgreqabs[8],
-              nl.2003.rivagg$pgreqabs[8],
-              nl.2004.rivagg$pgreqabs[8],
-              nl.2005.rivagg$pgreqabs[8],
-              nl.2006.rivagg$pgreqabs[8],
-              nl.2007.rivagg$pgreqabs[8],
-              nl.2008.rivagg$pgreqabs[8],
-              nl.2009.rivagg$pgreqabs[8],
-              nl.2010.rivagg$pgreqabs[8],
-              nl.2011.rivagg$pgreqabs[8],
+pts.p<- rbind(# nl.1991.rivagg$pgreqabs[8],
+          #     nl.1992.rivagg$pgreqabs[8],
+          #     nl.1993.rivagg$pgreqabs[8],
+          #     nl.1994.rivagg$pgreqabs[8],
+          #     nl.1995.rivagg$pgreqabs[8],
+          #     nl.1996.rivagg$pgreqabs[8],
+          #     nl.1997.rivagg$pgreqabs[8],
+          #     nl.1998.rivagg$pgreqabs[8],
+          #     nl.1999.rivagg$pgreqabs[8],
+          #     nl.2000.rivagg$pgreqabs[8],
+          #     nl.2001.rivagg$pgreqabs[8],
+          #     nl.2002.rivagg$pgreqabs[8],
+          #     nl.2003.rivagg$pgreqabs[8],
+          #     nl.2004.rivagg$pgreqabs[8],
+          #     nl.2005.rivagg$pgreqabs[8],
+          #     nl.2006.rivagg$pgreqabs[8],
+          #     nl.2007.rivagg$pgreqabs[8],
+          #     nl.2008.rivagg$pgreqabs[8],
+          #     nl.2009.rivagg$pgreqabs[8],
+              # nl.2010.rivagg$pgreqabs[8],
+              # nl.2011.rivagg$pgreqabs[8],
               nl.2012.rivagg$pgreqabs[8], 
               nl.2013.rivagg$pgreqabs[8],
               nl.2014.rivagg$pgreqabs[8],
               nl.2015.rivagg$pgreqabs[8], 
               nl.2016.rivagg$pgreqabs[8])
 
-def.p<- rbind(nl.1991.rivagg$pgreqabs[9],
-              nl.1992.rivagg$pgreqabs[9],
-              nl.1993.rivagg$pgreqabs[9],
-              nl.1994.rivagg$pgreqabs[9],
-              nl.1995.rivagg$pgreqabs[9],
-              nl.1996.rivagg$pgreqabs[9],
-              nl.1997.rivagg$pgreqabs[9],
-              nl.1998.rivagg$pgreqabs[9],
-              nl.1999.rivagg$pgreqabs[9],
-              nl.2000.rivagg$pgreqabs[9],
-              nl.2001.rivagg$pgreqabs[9],
-              nl.2002.rivagg$pgreqabs[9],
-              nl.2003.rivagg$pgreqabs[9],
-              nl.2004.rivagg$pgreqabs[9],
-              nl.2005.rivagg$pgreqabs[9],
-              nl.2006.rivagg$pgreqabs[9],
-              nl.2007.rivagg$pgreqabs[9],
-              nl.2008.rivagg$pgreqabs[9],
-              nl.2009.rivagg$pgreqabs[9],
-              nl.2010.rivagg$pgreqabs[9],
-              nl.2011.rivagg$pgreqabs[9],
+def.p<- rbind(# nl.1991.rivagg$pgreqabs[9],
+#               nl.1992.rivagg$pgreqabs[9],
+#               nl.1993.rivagg$pgreqabs[9],
+#               nl.1994.rivagg$pgreqabs[9],
+#               nl.1995.rivagg$pgreqabs[9],
+#               nl.1996.rivagg$pgreqabs[9],
+#               nl.1997.rivagg$pgreqabs[9],
+#               nl.1998.rivagg$pgreqabs[9],
+#               nl.1999.rivagg$pgreqabs[9],
+#               nl.2000.rivagg$pgreqabs[9],
+#               nl.2001.rivagg$pgreqabs[9],
+#               nl.2002.rivagg$pgreqabs[9],
+#               nl.2003.rivagg$pgreqabs[9],
+#               nl.2004.rivagg$pgreqabs[9],
+#               nl.2005.rivagg$pgreqabs[9],
+#               nl.2006.rivagg$pgreqabs[9],
+#               nl.2007.rivagg$pgreqabs[9],
+#               nl.2008.rivagg$pgreqabs[9],
+#               nl.2009.rivagg$pgreqabs[9],
+              # nl.2010.rivagg$pgreqabs[9],
+              # nl.2011.rivagg$pgreqabs[9],
               nl.2012.rivagg$pgreqabs[9], 
               nl.2013.rivagg$pgreqabs[9],
               nl.2014.rivagg$pgreqabs[9],
               nl.2015.rivagg$pgreqabs[9], 
               nl.2016.rivagg$pgreqabs[9])
 
-tr.p<- rbind(nl.1991.rivagg$pgreqabs[10],
-             nl.1992.rivagg$pgreqabs[10],
-             nl.1993.rivagg$pgreqabs[10],
-             nl.1994.rivagg$pgreqabs[10],
-             nl.1995.rivagg$pgreqabs[10],
-             nl.1996.rivagg$pgreqabs[10],
-             nl.1997.rivagg$pgreqabs[10],
-             nl.1998.rivagg$pgreqabs[10],
-             nl.1999.rivagg$pgreqabs[10],
-             nl.2000.rivagg$pgreqabs[10],
-             nl.2001.rivagg$pgreqabs[10],
-             nl.2002.rivagg$pgreqabs[10],
-             nl.2003.rivagg$pgreqabs[10],
-             nl.2004.rivagg$pgreqabs[10],
-             nl.2005.rivagg$pgreqabs[10],
-             nl.2006.rivagg$pgreqabs[10],
-             nl.2007.rivagg$pgreqabs[10],
-             nl.2008.rivagg$pgreqabs[10],
-             nl.2009.rivagg$pgreqabs[10],
-             nl.2010.rivagg$pgreqabs[10],
-             nl.2011.rivagg$pgreqabs[10],
+tr.p<- rbind(# nl.1991.rivagg$pgreqabs[10],
+          #    nl.1992.rivagg$pgreqabs[10],
+          #    nl.1993.rivagg$pgreqabs[10],
+          #    nl.1994.rivagg$pgreqabs[10],
+          #    nl.1995.rivagg$pgreqabs[10],
+          #    nl.1996.rivagg$pgreqabs[10],
+          #    nl.1997.rivagg$pgreqabs[10],
+          #    nl.1998.rivagg$pgreqabs[10],
+          #    nl.1999.rivagg$pgreqabs[10],
+          #    nl.2000.rivagg$pgreqabs[10],
+          #    nl.2001.rivagg$pgreqabs[10],
+          #    nl.2002.rivagg$pgreqabs[10],
+          #    nl.2003.rivagg$pgreqabs[10],
+          #    nl.2004.rivagg$pgreqabs[10],
+          #    nl.2005.rivagg$pgreqabs[10],
+          #    nl.2006.rivagg$pgreqabs[10],
+          #    nl.2007.rivagg$pgreqabs[10],
+          #    nl.2008.rivagg$pgreqabs[10],
+          #    nl.2009.rivagg$pgreqabs[10],
+             # nl.2010.rivagg$pgreqabs[10],
+             # nl.2011.rivagg$pgreqabs[10],
              nl.2012.rivagg$pgreqabs[10], 
              nl.2013.rivagg$pgreqabs[10],
              nl.2014.rivagg$pgreqabs[10],
              nl.2015.rivagg$pgreqabs[10], 
              nl.2016.rivagg$pgreqabs[10])
 
-imm.p<- rbind(nl.1991.rivagg$pgreqabs[11],
-              nl.1992.rivagg$pgreqabs[11],
-              nl.1993.rivagg$pgreqabs[11],
-              nl.1994.rivagg$pgreqabs[11],
-              nl.1995.rivagg$pgreqabs[11],
-              nl.1996.rivagg$pgreqabs[11],
-              nl.1997.rivagg$pgreqabs[11],
-              nl.1998.rivagg$pgreqabs[11],
-              nl.1999.rivagg$pgreqabs[11],
-              nl.2000.rivagg$pgreqabs[11],
-              nl.2001.rivagg$pgreqabs[11],
-              nl.2002.rivagg$pgreqabs[11],
-              nl.2003.rivagg$pgreqabs[11],
-              nl.2004.rivagg$pgreqabs[11],
-              nl.2005.rivagg$pgreqabs[11],
-              nl.2006.rivagg$pgreqabs[11],
-              nl.2007.rivagg$pgreqabs[11],
-              nl.2008.rivagg$pgreqabs[11],
-              nl.2009.rivagg$pgreqabs[11],
-              nl.2010.rivagg$pgreqabs[11],
-              nl.2011.rivagg$pgreqabs[11],
+imm.p<- rbind(# nl.1991.rivagg$pgreqabs[11],
+          #     nl.1992.rivagg$pgreqabs[11],
+          #     nl.1993.rivagg$pgreqabs[11],
+          #     nl.1994.rivagg$pgreqabs[11],
+          #     nl.1995.rivagg$pgreqabs[11],
+          #     nl.1996.rivagg$pgreqabs[11],
+          #     nl.1997.rivagg$pgreqabs[11],
+          #     nl.1998.rivagg$pgreqabs[11],
+          #     nl.1999.rivagg$pgreqabs[11],
+          #     nl.2000.rivagg$pgreqabs[11],
+          #     nl.2001.rivagg$pgreqabs[11],
+          #     nl.2002.rivagg$pgreqabs[11],
+          #     nl.2003.rivagg$pgreqabs[11],
+          #     nl.2004.rivagg$pgreqabs[11],
+          #     nl.2005.rivagg$pgreqabs[11],
+          #     nl.2006.rivagg$pgreqabs[11],
+          #     nl.2007.rivagg$pgreqabs[11],
+          #     nl.2008.rivagg$pgreqabs[11],
+          #     nl.2009.rivagg$pgreqabs[11],
+              # nl.2010.rivagg$pgreqabs[11],
+              # nl.2011.rivagg$pgreqabs[11],
               nl.2012.rivagg$pgreqabs[11], 
               nl.2013.rivagg$pgreqabs[11],
               nl.2014.rivagg$pgreqabs[11],
               nl.2015.rivagg$pgreqabs[11], 
               nl.2016.rivagg$pgreqabs[11])
 
-qap.1991.t<-ifelse(is.infinite(qt(1-nl.1991.rivagg$pgreqabs/2,nl.1991.rivagg$n-1)),
-                   nl.1991.rivagg$tstat,
-                   qt(1-nl.1991.rivagg$pgreqabs/2,nl.1991.rivagg$n-1))
+# qap.1991.t<-ifelse(is.infinite(qt(1-nl.1991.rivagg$pgreqabs/2,nl.1991.rivagg$n-1)),
+#                    nl.1991.rivagg$tstat,
+#                    qt(1-nl.1991.rivagg$pgreqabs/2,nl.1991.rivagg$n-1))
 
-qap.1992.t<-ifelse(is.infinite(qt(1-nl.1992.rivagg$pgreqabs/2,nl.1992.rivagg$n-1)),
-                   nl.1992.rivagg$tstat,
-                   qt(1-nl.1992.rivagg$pgreqabs/2,nl.1992.rivagg$n-1))
+# qap.1992.t<-ifelse(is.infinite(qt(1-nl.1992.rivagg$pgreqabs/2,nl.1992.rivagg$n-1)),
+#                    nl.1992.rivagg$tstat,
+#                    qt(1-nl.1992.rivagg$pgreqabs/2,nl.1992.rivagg$n-1))
 
-qap.1993.t<-ifelse(is.infinite(qt(1-nl.1993.rivagg$pgreqabs/2,nl.1993.rivagg$n-1)),
-                   nl.1993.rivagg$tstat,
-                   qt(1-nl.1993.rivagg$pgreqabs/2,nl.1993.rivagg$n-1))
+# qap.1993.t<-ifelse(is.infinite(qt(1-nl.1993.rivagg$pgreqabs/2,nl.1993.rivagg$n-1)),
+#                    nl.1993.rivagg$tstat,
+#                    qt(1-nl.1993.rivagg$pgreqabs/2,nl.1993.rivagg$n-1))
 
-qap.1994.t<-ifelse(is.infinite(qt(1-nl.1994.rivagg$pgreqabs/2,nl.1994.rivagg$n-1)),
-                   nl.1994.rivagg$tstat,
-                   qt(1-nl.1994.rivagg$pgreqabs/2,nl.1994.rivagg$n-1))
+# qap.1994.t<-ifelse(is.infinite(qt(1-nl.1994.rivagg$pgreqabs/2,nl.1994.rivagg$n-1)),
+#                    nl.1994.rivagg$tstat,
+#                    qt(1-nl.1994.rivagg$pgreqabs/2,nl.1994.rivagg$n-1))
 
-qap.1995.t<-ifelse(is.infinite(qt(1-nl.1995.rivagg$pgreqabs/2,nl.1995.rivagg$n-1)),
-                   nl.1995.rivagg$tstat,
-                   qt(1-nl.1995.rivagg$pgreqabs/2,nl.1995.rivagg$n-1))
+# qap.1995.t<-ifelse(is.infinite(qt(1-nl.1995.rivagg$pgreqabs/2,nl.1995.rivagg$n-1)),
+#                    nl.1995.rivagg$tstat,
+#                    qt(1-nl.1995.rivagg$pgreqabs/2,nl.1995.rivagg$n-1))
 
-qap.1996.t<-ifelse(is.infinite(qt(1-nl.1996.rivagg$pgreqabs/2,nl.1996.rivagg$n-1)),
-                   nl.1996.rivagg$tstat,
-                   qt(1-nl.1996.rivagg$pgreqabs/2,nl.1996.rivagg$n-1))
+# qap.1996.t<-ifelse(is.infinite(qt(1-nl.1996.rivagg$pgreqabs/2,nl.1996.rivagg$n-1)),
+#                    nl.1996.rivagg$tstat,
+#                    qt(1-nl.1996.rivagg$pgreqabs/2,nl.1996.rivagg$n-1))
 
-qap.1997.t<-ifelse(is.infinite(qt(1-nl.1997.rivagg$pgreqabs/2,nl.1997.rivagg$n-1)),
-                   nl.1997.rivagg$tstat,
-                   qt(1-nl.1997.rivagg$pgreqabs/2,nl.1997.rivagg$n-1))
+# qap.1997.t<-ifelse(is.infinite(qt(1-nl.1997.rivagg$pgreqabs/2,nl.1997.rivagg$n-1)),
+#                    nl.1997.rivagg$tstat,
+#                    qt(1-nl.1997.rivagg$pgreqabs/2,nl.1997.rivagg$n-1))
 
-qap.1998.t<-ifelse(is.infinite(qt(1-nl.1998.rivagg$pgreqabs/2,nl.1998.rivagg$n-1)),
-                   nl.1998.rivagg$tstat,
-                   qt(1-nl.1998.rivagg$pgreqabs/2,nl.1998.rivagg$n-1))
+# qap.1998.t<-ifelse(is.infinite(qt(1-nl.1998.rivagg$pgreqabs/2,nl.1998.rivagg$n-1)),
+#                    nl.1998.rivagg$tstat,
+#                    qt(1-nl.1998.rivagg$pgreqabs/2,nl.1998.rivagg$n-1))
 
-qap.1999.t<-ifelse(is.infinite(qt(1-nl.1999.rivagg$pgreqabs/2,nl.1999.rivagg$n-1)),
-                   nl.1999.rivagg$tstat,
-                   qt(1-nl.1999.rivagg$pgreqabs/2,nl.1999.rivagg$n-1))
+# qap.1999.t<-ifelse(is.infinite(qt(1-nl.1999.rivagg$pgreqabs/2,nl.1999.rivagg$n-1)),
+#                    nl.1999.rivagg$tstat,
+#                    qt(1-nl.1999.rivagg$pgreqabs/2,nl.1999.rivagg$n-1))
 
-qap.2000.t<-ifelse(is.infinite(qt(1-nl.2000.rivagg$pgreqabs/2,nl.2000.rivagg$n-1)),
-                   nl.2000.rivagg$tstat,
-                   qt(1-nl.2000.rivagg$pgreqabs/2,nl.2000.rivagg$n-1))
+# qap.2000.t<-ifelse(is.infinite(qt(1-nl.2000.rivagg$pgreqabs/2,nl.2000.rivagg$n-1)),
+#                    nl.2000.rivagg$tstat,
+#                    qt(1-nl.2000.rivagg$pgreqabs/2,nl.2000.rivagg$n-1))
 
-qap.2001.t<-ifelse(is.infinite(qt(1-nl.2001.rivagg$pgreqabs/2,nl.2001.rivagg$n-1)),
-                   nl.2001.rivagg$tstat,
-                   qt(1-nl.2001.rivagg$pgreqabs/2,nl.2001.rivagg$n-1))
+# qap.2001.t<-ifelse(is.infinite(qt(1-nl.2001.rivagg$pgreqabs/2,nl.2001.rivagg$n-1)),
+#                    nl.2001.rivagg$tstat,
+#                    qt(1-nl.2001.rivagg$pgreqabs/2,nl.2001.rivagg$n-1))
 
-qap.2002.t<-ifelse(is.infinite(qt(1-nl.2002.rivagg$pgreqabs/2,nl.2002.rivagg$n-1)),
-                   nl.2002.rivagg$tstat,
-                   qt(1-nl.2002.rivagg$pgreqabs/2,nl.2002.rivagg$n-1))
+# qap.2002.t<-ifelse(is.infinite(qt(1-nl.2002.rivagg$pgreqabs/2,nl.2002.rivagg$n-1)),
+#                    nl.2002.rivagg$tstat,
+#                    qt(1-nl.2002.rivagg$pgreqabs/2,nl.2002.rivagg$n-1))
 
-qap.2003.t<-ifelse(is.infinite(qt(1-nl.2003.rivagg$pgreqabs/2,nl.2003.rivagg$n-1)),
-                   nl.2003.rivagg$tstat,
-                   qt(1-nl.2003.rivagg$pgreqabs/2,nl.2003.rivagg$n-1))
+# qap.2003.t<-ifelse(is.infinite(qt(1-nl.2003.rivagg$pgreqabs/2,nl.2003.rivagg$n-1)),
+#                    nl.2003.rivagg$tstat,
+#                    qt(1-nl.2003.rivagg$pgreqabs/2,nl.2003.rivagg$n-1))
 
-qap.2004.t<-ifelse(is.infinite(qt(1-nl.2004.rivagg$pgreqabs/2,nl.2004.rivagg$n-1)),
-                   nl.2004.rivagg$tstat,
-                   qt(1-nl.2004.rivagg$pgreqabs/2,nl.2004.rivagg$n-1))
+# qap.2004.t<-ifelse(is.infinite(qt(1-nl.2004.rivagg$pgreqabs/2,nl.2004.rivagg$n-1)),
+#                    nl.2004.rivagg$tstat,
+#                    qt(1-nl.2004.rivagg$pgreqabs/2,nl.2004.rivagg$n-1))
 
-qap.2005.t<-ifelse(is.infinite(qt(1-nl.2005.rivagg$pgreqabs/2,nl.2005.rivagg$n-1)),
-                   nl.2005.rivagg$tstat,
-                   qt(1-nl.2005.rivagg$pgreqabs/2,nl.2005.rivagg$n-1))
+# qap.2005.t<-ifelse(is.infinite(qt(1-nl.2005.rivagg$pgreqabs/2,nl.2005.rivagg$n-1)),
+#                    nl.2005.rivagg$tstat,
+#                    qt(1-nl.2005.rivagg$pgreqabs/2,nl.2005.rivagg$n-1))
 
-qap.2006.t<-ifelse(is.infinite(qt(1-nl.2006.rivagg$pgreqabs/2,nl.2006.rivagg$n-1)),
-                   nl.2006.rivagg$tstat,
-                   qt(1-nl.2006.rivagg$pgreqabs/2,nl.2006.rivagg$n-1))
+# qap.2006.t<-ifelse(is.infinite(qt(1-nl.2006.rivagg$pgreqabs/2,nl.2006.rivagg$n-1)),
+#                    nl.2006.rivagg$tstat,
+#                    qt(1-nl.2006.rivagg$pgreqabs/2,nl.2006.rivagg$n-1))
 
-qap.2007.t<-ifelse(is.infinite(qt(1-nl.2007.rivagg$pgreqabs/2,nl.2007.rivagg$n-1)),
-                   nl.2007.rivagg$tstat,
-                   qt(1-nl.2007.rivagg$pgreqabs/2,nl.2007.rivagg$n-1))
+# qap.2007.t<-ifelse(is.infinite(qt(1-nl.2007.rivagg$pgreqabs/2,nl.2007.rivagg$n-1)),
+#                    nl.2007.rivagg$tstat,
+#                    qt(1-nl.2007.rivagg$pgreqabs/2,nl.2007.rivagg$n-1))
 
-qap.2008.t<-ifelse(is.infinite(qt(1-nl.2008.rivagg$pgreqabs/2,nl.2008.rivagg$n-1)),
-                   nl.2008.rivagg$tstat,
-                   qt(1-nl.2008.rivagg$pgreqabs/2,nl.2008.rivagg$n-1))
+# qap.2008.t<-ifelse(is.infinite(qt(1-nl.2008.rivagg$pgreqabs/2,nl.2008.rivagg$n-1)),
+#                    nl.2008.rivagg$tstat,
+#                    qt(1-nl.2008.rivagg$pgreqabs/2,nl.2008.rivagg$n-1))
 
-qap.2009.t<-ifelse(is.infinite(qt(1-nl.2009.rivagg$pgreqabs/2,nl.2009.rivagg$n-1)),
-                   nl.2009.rivagg$tstat,
-                   qt(1-nl.2009.rivagg$pgreqabs/2,nl.2009.rivagg$n-1))
+# qap.2009.t<-ifelse(is.infinite(qt(1-nl.2009.rivagg$pgreqabs/2,nl.2009.rivagg$n-1)),
+#                    nl.2009.rivagg$tstat,
+#                    qt(1-nl.2009.rivagg$pgreqabs/2,nl.2009.rivagg$n-1))
 
-qap.2010.t<-ifelse(is.infinite(qt(1-nl.2010.rivagg$pgreqabs/2,nl.2010.rivagg$n-1)),
-                   nl.2010.rivagg$tstat,
-                   qt(1-nl.2010.rivagg$pgreqabs/2,nl.2010.rivagg$n-1))
-
-qap.2011.t<-ifelse(is.infinite(qt(1-nl.2011.rivagg$pgreqabs/2,nl.2011.rivagg$n-1)),
-                   nl.2011.rivagg$tstat,
-                   qt(1-nl.2011.rivagg$pgreqabs/2,nl.2011.rivagg$n-1))
+# qap.2010.t<-ifelse(is.infinite(qt(1-nl.2010.rivagg$pgreqabs/2,nl.2010.rivagg$n-1)),
+#                    nl.2010.rivagg$tstat,
+#                    qt(1-nl.2010.rivagg$pgreqabs/2,nl.2010.rivagg$n-1))
+# 
+# qap.2011.t<-ifelse(is.infinite(qt(1-nl.2011.rivagg$pgreqabs/2,nl.2011.rivagg$n-1)),
+#                    nl.2011.rivagg$tstat,
+#                    qt(1-nl.2011.rivagg$pgreqabs/2,nl.2011.rivagg$n-1))
 
 qap.2012.t<-ifelse(is.infinite(qt(1-nl.2012.rivagg$pgreqabs/2,nl.2012.rivagg$n-1)),
                    nl.2012.rivagg$tstat,
@@ -1991,24 +2053,26 @@ qap.2016.t<-ifelse(is.infinite(qt(1-nl.2016.rivagg$pgreqabs/2,nl.2016.rivagg$n-1
                    nl.2016.rivagg$tstat,
                    qt(1-nl.2016.rivagg$pgreqabs/2,nl.2016.rivagg$n-1))
 
-d<- as.data.frame(rbind(qap.1991.t,qap.1992.t,qap.1993.t,qap.1994.t,
-                        qap.1995.t,qap.1996.t,qap.1997.t,qap.1998.t,
-                        qap.1999.t,qap.2000.t,qap.2001.t,qap.2002.t,
-                        qap.2003.t,qap.2004.t,qap.2005.t,qap.2006.t,
-                        qap.2007.t,qap.2008.t,qap.2009.t,qap.2010.t,
-                        qap.2011.t,qap.2012.t,qap.2013.t,qap.2014.t,
+d<- as.data.frame(rbind(# qap.1991.t,qap.1992.t,qap.1993.t,qap.1994.t,
+                        # qap.1995.t,qap.1996.t,qap.1997.t,qap.1998.t,
+                        # qap.1999.t,qap.2000.t,qap.2001.t,qap.2002.t,
+                        # qap.2003.t,qap.2004.t,qap.2005.t,qap.2006.t,
+                        # qap.2007.t,qap.2008.t,qap.2009.t,qap.2010.t,
+                        #qap.2011.t,
+                                    qap.2012.t,qap.2013.t,qap.2014.t,
                         qap.2015.t,qap.2016.t))
 
 write.csv(d,"qap_tstats.csv")
 
 d<- read.csv("qap_tstats.csv")
-d<- d %>% select(-year)
+d<- d %>% select(-X)
 
 d<- d %>% select(-V1)
 
 variables.d<- d %>%
   correlate() %>%
-  select(-rowname)
+  select(-term) %>%
+  cbind()
 diag(variables.d)<- 1
 dissim.var.d<- as.dist(1-variables.d)
 
@@ -2047,6 +2111,7 @@ dev.off()
 
 
 ##I reshaped in Excel. You can also reshape in R to go from object d to object e
+############ Stuck at this step ############
 
 e<- read.csv("qap_tstats_reshape.csv")
 e<- e %>%
@@ -2068,25 +2133,25 @@ clust.v<- kmeans(mds.v,3)$cluster %>%
 mds.v <- mds.v %>%
   mutate(groups = clust.v)
 
-rownames(mds.v)<- c("1991",
-                    "1992",
-                    "1993",
-                    "1994",
-                    "1995",
-                    "1996",
-                    "1997",
-                    "1998",
-                    "1999",
-                    "2000",
-                    "2001",
-                    "2002",
-                    "2003",
-                    "2004",
-                    "2005",
-                    "2006",
-                    "2007",
-                    "2008",
-                    "2009",
+rownames(mds.v)<- c(# "1991",
+                    # "1992",
+                    # "1993",
+                    # "1994",
+                    # "1995",
+                    # "1996",
+                    # "1997",
+                    # "1998",
+                    # "1999",
+                    # "2000",
+                    # "2001",
+                    # "2002",
+                    # "2003",
+                    # "2004",
+                    # "2005",
+                    # "2006",
+                    # "2007",
+                    # "2008",
+                    # "2009",
                     "2010",
                     "2011",
                     "2012",
